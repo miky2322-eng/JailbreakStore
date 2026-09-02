@@ -32,6 +32,21 @@ PS5_HOST=<ip> make deploy   # build + send to console
 Edit `NEW_TITLE`, `NEW_DEEPLINK`, and `icon0.png` in `source/main.c` /
 the project root before building to customize the name, URL, and icon.
 
+## Changing the Icon
+
+1. Replace `icon0.png` in the project root with your own image, already
+   square (512x512 matches the console's own tile icons). The build
+   embeds the file as-is -- it does not resize or pad it, so a non-square
+   source will render stretched on the tile.
+2. Run `make`. The Makefile regenerates `source/icon0_png.h` from
+   `icon0.png` automatically, embedding it into the build.
+3. Send the rebuilt `JailbreakStore.elf` and reboot. It writes the new
+   icon to `/user/appmeta/NPXS40047/icon0.png` on the console.
+
+Once `icon0Info` points there, you can also skip all of the above and
+just overwrite `/user/appmeta/NPXS40047/icon0.png` directly (FTP or any
+file manager) -- no rebuild, no resend, just reboot to see it.
+
 ## Run
 
 Send `JailbreakStore.elf` to the console the same way you'd load any
