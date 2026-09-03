@@ -14,7 +14,7 @@
 
 #define TITLE_ID      "NPXS40047"
 #define NEW_TITLE     "Jailbreak Store"
-#define NEW_DEEPLINK  "https://vinasxexplosao.github.io/slopkitNadarepublicano/"
+#define NEW_DEEPLINK  "https://jordyidk.github.io/slopkit/"
 #define ICON_DIR      "/user/appmeta/" TITLE_ID
 #define ICON_PATH     ICON_DIR "/icon0.png"
 #define NEW_ICON0     ICON_PATH "?ts=1"
